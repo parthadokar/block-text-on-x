@@ -2,5 +2,5 @@
   filter: blur(7px);
   opacity: 0.35;
   pointer-events: none;
-  transition: filter 0.2s ease, opacity 0.2s ease;
+  transition: filter 0.15s ease, opacity 0.15s ease;
 }

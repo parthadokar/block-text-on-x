@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "X Keyword Post Blocker",
-  "version": "1.0",
-  "description": "Hides or blurs posts on X that contain blocked keywords",
+  "name": "X Word Blocker",
+  "version": "1.0.0",
+  "description": "Block posts on X that contain specific words or @mentions.",
   "permissions": ["storage"],
   "content_scripts": [
     {
@@ -13,5 +13,10 @@
   ],
   "action": {
     "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }

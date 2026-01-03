@@ -1,10 +1,11 @@
 const textarea = document.getElementById("words")
-const status = document.getElementById("status")
 
-chrome.storage.sync.get(["blockedWords"], data => {
+// Load saved keywords
+chrome.storage.sync.get(["blockedWords"], (data) => {
   textarea.value = (data.blockedWords || []).join("\n")
 })
 
+// Save and close popup
 document.getElementById("save").addEventListener("click", () => {
   const words = textarea.value
     .split("\n")
@@ -12,7 +13,7 @@ document.getElementById("save").addEventListener("click", () => {
     .filter(Boolean)
 
   chrome.storage.sync.set({ blockedWords: words }, () => {
-    status.textContent = "Saved"
-    setTimeout(() => (status.textContent = ""), 1500)
+    // Close the popup after saving
+    window.close()
   })
 })
